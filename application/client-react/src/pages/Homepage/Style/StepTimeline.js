@@ -1,44 +1,52 @@
-/*사용자 유언*/
+// components/styles/StepTimelineStyles.js
+import styled from 'styled-components';
 
-.step-container {
+export const StepContainer = styled.section`
   background: white;
   padding: 100px 20px;
   text-align: center;
-}
+`;
 
-.step-title {
+export const StepTitle = styled.h2`
   font-size: 28px;
   font-weight: 700;
-}
+`;
 
-.step-desc {
+export const StepDesc = styled.p`
   margin-top: 12px;
   color: #6b7280;
   font-size: 16px;
   line-height: 1.6;
-}
+`;
 
-.step-timeline {
+export const StepTimeline = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-start;
   position: relative;
   margin-top: 56px;
   gap: 16px;
-}
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
 
+    &::before {
+      display: none;
+    }
+  }
+`;
 
-.step-item {
+export const StepItem = styled.div`
   background: white;
   z-index: 1;
   text-align: center;
   flex: 1;
   max-width: 180px;
   position: relative;
-}
+`;
 
-.icon-circle {
+export const IconCircle = styled.div`
   width: 56px;
   height: 56px;
   background: #eef2ff;
@@ -50,39 +58,28 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-}
+`;
 
-.step-label {
+export const StepLabel = styled.div`
   font-weight: 700;
   font-size: 15px;
   margin-bottom: 8px;
-}
+`;
 
-.step-text {
+export const StepText = styled.p`
   font-size: 13px;
   color: #6b7280;
   line-height: 1.5;
-}
+`;
 
-.connector {
+export const Connector = styled.span`
   position: absolute;
   top: 56px;
   right: -16px;
   color: #ccc;
   font-size: 20px;
-}
 
-@media (max-width: 768px) {
-  .step-timeline {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .step-timeline::before {
+  @media (max-width: 768px) {
     display: none;
   }
-
-  .connector {
-    display: none;
-  }
-}
+`;

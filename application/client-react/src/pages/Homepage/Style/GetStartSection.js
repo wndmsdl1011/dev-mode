@@ -1,38 +1,62 @@
-.get-start-section {
+// components/styles/GetStartSectionStyles.js
+import styled from 'styled-components';
+
+export const GuideText = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const GuideTextTitle = styled.strong`
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+`;
+
+export const GuideTextSub = styled.p`
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.6;
+`;
+
+export const GuideIcon = styled.img`
+  width: 32px;
+  height: 32px;
+`;
+
+export const GetStartSection = styled.section`
   background: white;
   padding: 100px 40px;
-}
+`;
 
-.inquiry-box {
-    background: #fcfcfc;
+export const InquiryBox = styled.div`
+  background: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border: 1px solid #e5e7eb;
   border-radius: 10px;
   padding: 24px 32px;
-  background: #ffffff;
   margin-top: 40px;
-}
+`;
 
-.inquiry-text {
+export const InquiryText = styled.div`
   display: flex;
   flex-direction: column;
-}
+`;
 
-.inquiry-title {
+export const InquiryTitle = styled.div`
   font-size: 16px;
   font-weight: 600;
   color: #111827;
-}
+`;
 
-.inquiry-sub {
+export const InquirySub = styled.div`
   font-size: 14px;
   color: #6b7280;
   margin-top: 4px;
-}
+`;
 
-.inquiry-button {
+export const InquiryButton = styled.button`
   background-color: #6366f1;
   color: white;
   font-size: 14px;
@@ -42,25 +66,24 @@
   font-weight: 500;
   cursor: pointer;
   white-space: nowrap;
-}
+`;
 
-
-.get-start-title {
+export const GetStartTitle = styled.h2`
   font-size: 28px;
   font-weight: 700;
   text-align: center;
   margin-bottom: 12px;
   color: #111827;
-}
+`;
 
-.get-start-sub {
+export const GetStartSub = styled.p`
   text-align: center;
   font-size: 16px;
   color: #6b7280;
   margin-bottom: 60px;
-}
+`;
 
-.get-start-grid {
+export const GetStartGrid = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -68,61 +91,64 @@
   max-width: 1200px;
   margin: 0 auto;
   flex-wrap: wrap;
-}
+`;
 
-.guide-block, .faq-block {
+export const GuideBlock = styled.div`
   flex: 1;
   min-width: 300px;
-}
+`;
 
-/* 왼쪽: 가이드 */
-.guide-title {
+export const FaqBlock = styled.div`
+  flex: 1;
+  min-width: 300px;
+`;
+
+export const GuideTitle = styled.h4`
   font-size: 25px;
   font-weight: 700;
   margin-bottom: 20px;
   color: #111827;
-}
+`;
 
-.guide-item {
+export const GuideItem = styled.div`
   display: flex;
   align-items: flex-start;
   gap: 12px;
   margin-bottom: 16px;
-}
+`;
 
-.guide-item-icon {
+export const GuideItemIcon = styled.div`
   font-size: 20px;
   line-height: 1;
   margin-top: 3px;
-}
+`;
 
-.guide-item-text {
+export const GuideItemText = styled.div`
   font-size: 14px;
   color: #374151;
   line-height: 1.6;
-}
+`;
 
-/* CTA 박스 */
-.cta-box {
+export const CtaBox = styled.div`
   background: linear-gradient(to right, #6366f1, #818cf8);
   padding: 24px;
   border-radius: 16px;
   margin-top: 36px;
   color: white;
-}
 
-.cta-box h4 {
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 6px;
-}
+  h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
 
-.cta-box p {
-  font-size: 14px;
-  margin-bottom: 12px;
-}
+  p {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+`;
 
-.cta-button {
+export const CtaButton = styled.button`
   background: white;
   color: #4f46e5;
   font-weight: 600;
@@ -131,33 +157,32 @@
   font-size: 14px;
   border: none;
   cursor: pointer;
-}
+`;
 
-/* 오른쪽: FAQ */
-.faq-title {
+export const FaqTitle = styled.h4`
   font-size: 25px;
   font-weight: 700;
   margin-bottom: 24px;
-}
+`;
 
-.faq-question {
+export const FaqQuestion = styled.div`
   margin-bottom: 24px;
-}
+`;
 
-.faq-question-title {
+export const FaqQuestionTitle = styled.div`
   font-size: 15px;
   font-weight: 600;
   color: #111827;
   margin-bottom: 4px;
-}
+`;
 
-.faq-question-text {
+export const FaqQuestionText = styled.div`
   font-size: 14px;
   color: #6b7280;
   line-height: 1.6;
-}
+`;
 
-.faq-button {
+export const FaqButton = styled.button`
   background: white;
   border: 1.5px solid #4f46e5;
   color: #4f46e5;
@@ -167,10 +192,9 @@
   border-radius: 8px;
   margin-top: 24px;
   cursor: pointer;
-}
+`;
 
-/* 하단 회색 안내 */
-.legal-footer-note {
+export const LegalFooterNote = styled.div`
   background-color: #f1f4ff;
   text-align: center;
   padding: 24px;
@@ -178,11 +202,11 @@
   font-size: 14px;
   color: #6b7280;
   border-radius: 12px;
-}
+`;
 
-.section-divider {
+export const SectionDivider = styled.hr`
   border: none;
   height: 2px;
-  background-color: #bfc0c2; /* 연한 회색 (#f3f4f6 보다 조금 더 진함) */
-  margin: 40px 0;             /* 위아래 여백 */
-}
+  background-color: #bfc0c2;
+  margin: 40px 0;
+`;

@@ -1,38 +1,41 @@
-/* Container */
-.login-container {
+// components/styles/LoginPageStyles.js
+import styled from 'styled-components';
+
+export const LoginContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 40px 20px;
   font-family: 'Noto Sans KR', sans-serif;
   color: #333;
-}
+`;
 
-/* 제목 영역 */
-.login-subtext {
+export const LoginSubtext = styled.div`
   font-size: 14px;
   color: #666;
   margin-bottom: 8px;
-}
-.login-title-wrapper {
+`;
+
+export const LoginTitleWrapper = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 30px;
-}
-.login-line {
+`;
+
+export const LoginLine = styled.div`
   flex: 1;
   height: 1px;
   background-color: #ddd;
-}
-.login-title-text {
+`;
+
+export const LoginTitleText = styled.div`
   margin: 0 20px;
   font-size: 32px;
   font-weight: 700;
   letter-spacing: -1px;
-}
+`;
 
-/* 입력창 */
-.login-input {
+export const LoginInput = styled.input`
   width: 100%;
   max-width: 400px;
   padding: 16px;
@@ -41,13 +44,13 @@
   border-radius: 12px;
   font-size: 16px;
   box-sizing: border-box;
-}
-.login-input:focus {
-  border-color: #574bff;
-}
 
-/* 옵션 그룹 */
-.login-option-group {
+  &:focus {
+    border-color: #574bff;
+  }
+`;
+
+export const LoginOptionGroup = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -56,21 +59,22 @@
   margin-bottom: 30px;
   font-size: 14px;
   color: #666;
-}
-.login-option-item {
+`;
+
+export const LoginOptionItem = styled.div`
   display: flex;
   align-items: center;
   margin-right: 20px;
   cursor: pointer;
-}
-.login-option-item svg {
-  margin-right: 6px;
-  width: 18px;
-  height: 18px;
-}
 
-/* 버튼 */
-.login-button {
+  svg {
+    margin-right: 6px;
+    width: 18px;
+    height: 18px;
+  }
+`;
+
+export const LoginButton = styled.button`
   width: 100%;
   max-width: 420px;
   padding: 18px;
@@ -82,28 +86,29 @@
   border-radius: 12px;
   cursor: pointer;
   margin-bottom: 15px;
-}
-.login-button:hover {
-  background-color: #4633d6;
-}
 
-/* 찾기 링크 */
-.login-find-links {
+  &:hover {
+    background-color: #4633d6;
+  }
+`;
+
+export const LoginFindLinks = styled.div`
   font-size: 14px;
   color: #999;
   margin-bottom: 40px;
-}
-.login-find-links a {
-  color: inherit;
-  text-decoration: none;
-  margin: 0 8px;
-}
-.login-find-links a:hover {
-  text-decoration: underline;
-}
 
-/* 회원가입 박스 */
-.login-signup-box {
+  a {
+    color: inherit;
+    text-decoration: none;
+    margin: 0 8px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+`;
+
+export const LoginSignupBox = styled.div`
   width: 100%;
   max-width: 420px;
   padding: 16px;
@@ -113,12 +118,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.login-signup-box a {
-  color: #574bff;
-  text-decoration: none;
-  font-weight: 500;
-}
-.login-signup-box a:hover {
-  text-decoration: underline;
-}
+
+  a {
+    color: #574bff;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+`;
