@@ -5,10 +5,10 @@ import { Routes, Route } from "react-router-dom";
 import AppLayOut from "../Layout/AppLayOut";
 
 // Pages
-import HomePage from "../pages/HomePage";
-import LoginPage from "../pages/LoginPage";
-import MyPage from "../pages/MyPage";
-import RegisterPage from "../pages/RegisterPage";
+import HomePage from "../pages/Homepage/HomePage.js";
+import LoginPage from '../pages/LoginPage/LoginPage';
+import MyPage from '../pages/MyPage/MyPage';
+import RegisterPage from "../pages/RegisterPage/RegisterPage";
 import WillWritePage from "../pages/WillWritePage";
 import WillDetailPage from "../pages/WillDetailPage";
 import NotFoundPage from "../pages/NotFoundPage";
