@@ -12,6 +12,7 @@ import RegisterPage from "../pages/RegisterPage/RegisterPage";
 import WillWritePage from "../pages/WillWritePage";
 import WillDetailPage from "../pages/WillDetailPage";
 import NotFoundPage from "../pages/NotFoundPage";
+import WillListPage from "../pages/WillListPage/WillListPage"
 
 const AppRouter = () => {
   return (
@@ -19,7 +20,7 @@ const AppRouter = () => {
       {/* Main App Layout - All pages below share the AppLayOut */}
       <Route element={<AppLayOut />}>
         {/* Public Routes */}
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<WillListPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
 
