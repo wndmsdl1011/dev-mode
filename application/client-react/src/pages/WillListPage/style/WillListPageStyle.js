@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  /* 전체 컨테이너 부분 */  
+  width: 70%;
+  margin: 0 auto; 
   padding: 20px;
   background-color: #f9fafb;
   min-height: 100vh;
