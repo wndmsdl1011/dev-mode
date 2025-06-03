@@ -18,6 +18,7 @@ import {
   Th,
   DownloadBtn,
 } from "./Style/AdminManagementStyle";
+import { MdArrowDownward, MdArrowUpward } from "react-icons/md";
 
 const AdminManagement = () => {
   const [data, setData] = useState([
@@ -63,6 +64,8 @@ const AdminManagement = () => {
     },
   ]);
 
+  const [sortOrder, setSortOrder] = useState("latest"); // 최신순 기본
+
   const toggleSelect = (id) => {
     setData((prevData) =>
       prevData.map((item) =>
@@ -87,6 +90,18 @@ const AdminManagement = () => {
       )
     );
   };
+
+  const toggleSortOrder = () => {
+    setSortOrder((prev) => (prev === "latest" ? "oldest" : "latest"));
+  };
+
+  const sortedData = [...data].sort((a, b) => {
+    if (sortOrder === "latest") {
+      return b.id - a.id;
+    } else {
+      return a.id - b.id;
+    }
+  });
 
   return (
     <PageContainer>
@@ -127,7 +142,7 @@ const AdminManagement = () => {
       <Actions>
         <ActionButton onClick={toggleSelectAll}>전체 선택</ActionButton>
         <ActionButton danger onClick={toggleDeathStatus}>
-          선택 항목 사망여부 변경
+          사망여부 변경
         </ActionButton>
       </Actions>
 
@@ -135,7 +150,20 @@ const AdminManagement = () => {
         <Table>
           <thead>
             <tr>
-              <Th>번호</Th>
+              <Th>
+                번호{" "}
+                <span
+                  onClick={toggleSortOrder}
+                  style={{ cursor: "pointer", verticalAlign: "middle" }}
+                  title={sortOrder === "latest" ? "최신순" : "오래된순"}
+                >
+                  {sortOrder === "latest" ? (
+                    <MdArrowDownward size={16} />
+                  ) : (
+                    <MdArrowUpward size={16} />
+                  )}
+                </span>
+              </Th>
               <Th>선택</Th>
               <Th>이름</Th>
               <Th>성별</Th>
@@ -145,7 +173,7 @@ const AdminManagement = () => {
             </tr>
           </thead>
           <tbody>
-            {data.map((item) => (
+            {sortedData.map((item) => (
               <Tr key={item.id}>
                 <Td>{item.id}</Td>
                 <Td>
