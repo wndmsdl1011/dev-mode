@@ -1,10 +1,7 @@
 import './App.css';
-import ToastMessage from './common/component/ToastMessage';
 import AppRouter from './routes/AppRouter';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-// npm install react-toastify 해주세요.
 
 function App() {
   return (
@@ -21,7 +18,6 @@ function App() {
         pauseOnHover
         theme="colored"
       />
-      <ToastMessage/>
     </div>
   );
 }

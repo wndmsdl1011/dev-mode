@@ -13,17 +13,15 @@ import {
   DocumentTitle,
   InfoRow,
   HashText,
-  CopyIcon,
   Label,
   DocumentInfo,
   ActionButtons,
   EditButton,
   DeleteButton,
-  ButtonIcon,
 } from "./style/WillListPageStyle";
+import { FaCopy, FaEdit, FaTrashAlt, FaFileAlt } from "react-icons/fa";
 
 const WillListPage = () => {
-  // 유언장 예시 데이터
   const exampleWills = [
     {
       id: 1,
@@ -61,7 +59,6 @@ const WillListPage = () => {
 
   return (
     <Container>
-      {/* 프로필 섹션 */}
       <ProfileSection>
         <ProfileImage src="/images/back.PNG" alt="프로필" />
         <ProfileInfo>
@@ -69,46 +66,43 @@ const WillListPage = () => {
           <p>가입일: 2023년 8월</p>
           <p>kim.yh@example.com</p>
         </ProfileInfo>
-        {/* 유언장 작성 버튼 */}
         <CreateButton>유언장 작성 시작하기</CreateButton>
       </ProfileSection>
 
-      {/* 유언장 목록 */}
       <DocumentList>
         {exampleWills.map((will) => (
           <DocumentItem key={will.id}>
-            {/* 좌측 아이콘 */}
-            <LeftSection>📄</LeftSection>
+            <LeftSection>
+              <FaFileAlt size={50} color="#6366f1" />
+            </LeftSection>
 
-            {/* 중앙 영역: 제목, 해시+복사+상태, 열람자 */}
             <CenterSection>
               <DocumentTitle>{will.title}</DocumentTitle>
 
-              {/* 한줄: 해시 + 복사버튼(이미지) + 상태 태그 */}
               <InfoRow>
                 <HashText>{will.hash}</HashText>
-                <CopyIcon src="/images/E10.PNG" alt="복사" />
+                <FaCopy
+                  size={16}
+                  color="#6b7280"
+                  style={{ cursor: "pointer" }}
+                />
                 {will.blockchainRegistered && (
                   <Label $blockchain>블록체인 등록됨</Label>
                 )}
                 {will.notarized && <Label $notarized>공증 완료</Label>}
               </InfoRow>
 
-              {/* 열람자 정보 */}
               <DocumentInfo>열람자: {will.viewers}</DocumentInfo>
             </CenterSection>
 
-            {/* 우측 수정/삭제 버튼 */}
             <RightSection>
               <ActionButtons>
-                {/* 수정 버튼 (이미지 아이콘) */}
                 <EditButton>
-                  <ButtonIcon src="/images/D2.PNG" alt="수정" />
+                  <FaEdit size={16} style={{ marginRight: "6px" }} />
                   수정하기
                 </EditButton>
-                {/* 삭제 버튼 (이미지 아이콘) */}
                 <DeleteButton>
-                  <ButtonIcon src="/images/D3.PNG" alt="삭제" />
+                  <FaTrashAlt size={16} style={{ marginRight: "6px" }} />
                   삭제하기
                 </DeleteButton>
               </ActionButtons>
