@@ -192,7 +192,7 @@ const PersonalRegisterPage = () => {
       role: "USER",
     };
     console.log("회원가입 요청:", requestBody);
-    dispatch(registerUser({ values: form, navigate }));
+    dispatch(registerUser({ values: form, navigate}));
   };
 
   return (

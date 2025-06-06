@@ -10,7 +10,6 @@ import HomePage from "../pages/Homepage/HomePage";
 import LoginPage from "../pages/LoginPage/LoginPage";
 import MyPage from "../pages/MyPage/MyPage";
 import PersonalRegisterPage from "../pages/RegisterPage/PersonalRegisterPage";
-import NotaryRegisterPage from "../pages/RegisterPage/NotaryRegisterPage";
 import WillWritePage from "../pages/WillWritePage";
 import WillDetailPage from "../pages/WillDetailPage";
 import NotFoundPage from "../pages/NotFoundPage";
@@ -34,7 +33,6 @@ const AppRouter = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register/personal" element={<PersonalRegisterPage />} />
-        <Route path="/register/notary" element={<NotaryRegisterPage />} />
 
         {/* User Routes */}
         <Route path="/mypage" element={<MyPage />} />
